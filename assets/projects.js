@@ -1,0 +1,141 @@
+/* PROJECT CATALOGUE. Edit this file to update cards and case studies. No build needed.
+   Add a project by copying an object. Give it a unique lowercase, hyphenated id.
+   Its shareable page is project.html?id=YOUR-ID. See README.md for examples.
+   Private source links are deliberately omitted from this public website. */
+window.PORTFOLIO = {
+  name: 'Usman Idris Kwaru',
+  email: 'kwaru91@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/usman-kwaru-61754aa0/',
+  github: 'https://github.com/usman-idris',
+  projects: [
+    {
+      id: 'hadum-dictionary', page: 'projects/hadum-dictionary.html', title: 'Hadum Dictionary', number: '01',
+      category: 'Client Work', filters: ['Client Work', 'Software Development'],
+      status: 'Client delivery · Source code supplied', type: 'Dictionary & language learning',
+      summary: 'A community dictionary that brings word submissions, pronunciation recordings, editorial review, and language learning into one platform.',
+      stack: ['ASP.NET Core', 'EF Core', 'SQL Server', 'Bootstrap'],
+      image: 'assets/images/hadum-home.webp', imageAlt: 'Hadum Dictionary word browsing interface with search filters and word entries',
+      gallery: [
+        { src: 'assets/images/hadum-game.webp', caption: 'The picture-word game connects vocabulary with visual learning.' },
+        { src: 'assets/images/hadum-review.webp', caption: 'An administration area supports review and content management.' }
+      ],
+      visual: 'dictionary', repo: null, demo: null, private: true,
+      role: 'Sole developer · Client project',
+      context: 'Developed for a client who requested the application source code. My delivery covered the code; hosting was outside the engagement.',
+      problem: 'A collaborative dictionary needs more than a list of definitions. Contributors need a way to submit rich entries, while editors need to review material before it becomes publicly visible.',
+      solution: 'I developed a layered MVC application with word and article submissions, pronunciation and image uploads, moderation workflows, contributor dashboards, and a picture-word game.',
+      features: ['Word search and browsing with definitions and examples', 'Word and article submissions with administrator review', 'Image uploads and in-browser pronunciation recording', 'Contributor scores and a picture-word learning game', 'Identity, role-based access, and Google/Facebook authentication'],
+      engineering: ['N-tier architecture with separate data, model, utility, and web projects', 'Entity Framework Core and SQL Server for application data', 'Review states that separate pending submissions from approved content'],
+      outcome: 'Source code delivered to the client. No live demo is linked because I did not host the application.',
+      limitation: 'The public case study shows approved project screenshots. The client source code remains private.'
+    },
+    {
+      id: 'decoy-forge', page: 'projects/decoy-forge.html', title: 'Decoy Forge', number: '02',
+      category: 'Cybersecurity', filters: ['Cybersecurity', 'Software Development'],
+      status: 'Hackathon prototype', type: 'Cyber deception & detection',
+      summary: 'An AI-assisted honeytoken prototype that generates believable decoys and turns simulated intruder interactions into visible alerts.',
+      stack: ['Python', 'Streamlit', 'Flask', 'SQLite', 'Gemini'],
+      image: 'assets/images/decoy-dashboard.webp', imageAlt: 'Decoy Forge dashboard displaying a simulated triggered honeytoken and response guidance',
+      gallery: [{ src: 'assets/images/decoy-generate.webp', caption: 'A fictional organisation profile guides decoy generation.' }],
+      visual: 'decoy', repo: null, demo: null, private: true,
+      role: 'Code developer · Group I, CYBERGs 5.0',
+      context: 'A group prototype for the CYBERGs 5.0 AI & Cybersecurity Hackathon. I developed all project code. Team members: Usman Idris Kwaru, Methusella Nyongesa Misiko, and Vanessa Baah-Williams.',
+      problem: 'Generic decoys can look out of place, and a detection alert alone may not help a non-specialist understand what to investigate next.',
+      solution: 'I built a local demonstration that creates organisation-aware fictional decoys, scores their believability, suggests placement, and displays trigger events alongside response guidance.',
+      features: ['Five fictional decoy types with optional Gemini generation', 'Template fallback when AI is unavailable', 'Flask tripwires for tracked documents, a simulated share, and a decoy login', 'Streamlit alert dashboard, charts, and investigation guidance', 'Optional SMTP notifications and security-assessment reports'],
+      engineering: ['Separate modules for generation, scoring, storage, alerts, and notification', 'SQLite records decoys and trigger events', 'Bandit and dependency-audit reports included in the project'],
+      outcome: 'A working demonstration prototype with screenshots, a self-test script, and documented limitations.',
+      limitation: 'A hackathon prototype using fictional data and simulated environments. It is not a production security product; a trigger is a signal to investigate, not proof of a breach.'
+    },
+    {
+      id: 'coreforge', page: 'projects/coreforge.html', title: 'CoreForge Starter Kit', number: '03',
+      category: 'Software Development', filters: ['Software Development', 'Cybersecurity'],
+      status: 'In development', type: 'Reusable application foundation',
+      summary: 'A layered ASP.NET Core foundation with identity, granular permissions, reusable CRUD modules, logging, and validated file uploads.',
+      stack: ['C#', 'ASP.NET Core', 'EF Core', 'SQL Server'],
+      visual: 'architecture', repo: null, demo: null, private: true,
+      role: 'Sole developer · Personal project',
+      context: 'A reusable application starter developed in Standard and Pro editions. Both editions are presented here as one engineering project.',
+      problem: 'New web applications repeatedly need the same foundation: authentication, permission checks, data access, administration, and a consistent way to build CRUD features.',
+      solution: 'I developed a layered starter with identity management, roles and granular permissions, Category and Product modules, structured logging, and local file-upload validation.',
+      features: ['Identity, users, roles, and permission-based authorisation', 'Category and Product CRUD modules', 'File size, extension, and binary-signature validation', 'Structured logging and file-based audit events', 'Architecture documentation and unit/integration test projects'],
+      engineering: ['Separate Domain, Application, Infrastructure, Persistence, Web, and API projects', 'Repository and Unit of Work patterns around EF Core', 'Documentation identifies implemented features and remaining gaps'],
+      outcome: 'A substantial starter foundation with documented setup, architecture, and known limitations.',
+      limitation: 'API authentication and OpenAPI are scaffolding; application API endpoints are not implemented. Azure/AWS storage providers are non-functional stubs. The audit trail has no in-app viewer.'
+    },
+    {
+      id: 'wheei', page: 'projects/wheei.html', title: 'WHEE Initiative', number: '04',
+      category: 'Client Work', filters: ['Client Work', 'Software Development'],
+      status: 'Client website · Live', type: 'Nonprofit website',
+      summary: 'A public website and content-management application for an NGO, combining organisational information with restricted gallery administration.',
+      stack: ['C#', 'ASP.NET Core MVC', 'EF Core', 'Bootstrap'],
+      visual: 'community', repo: null, demo: 'https://wheeinitiative.org/', private: true,
+      role: 'Sole developer · Client project',
+      context: 'Developed for Women Health Empowerment & Emancipation Initiative. The client hosts the live website.',
+      problem: 'The organisation needed an accessible public presence and a controlled way to manage gallery content.',
+      solution: 'I developed the NGO website with public information pages and role-restricted gallery administration, using a layered ASP.NET Core application.',
+      features: ['Public home, about, and contact information pages', 'Organisational content and gallery presentation', 'Role-restricted gallery uploads and deletion', 'Identity-based account and access management'],
+      engineering: ['Separate data-access, model, utility, and web projects', 'Entity Framework Core for persistent application data', 'Public content and administrative routes separated with MVC Areas'],
+      outcome: 'A client-hosted website available at wheeinitiative.org. Earlier repository versions are consolidated into this case study.',
+      limitation: 'The client controls hosting and current live content. Source code is private.'
+    },
+    {
+      id: 'mfa-demo', page: 'projects/mfa-demo.html', title: 'Multi-factor Authentication', number: '05',
+      category: 'Cybersecurity', filters: ['Cybersecurity', 'Software Development'],
+      status: 'Academic demonstration', type: 'Identity & authentication',
+      summary: 'A full-stack authentication demonstration with authenticator codes, email OTP fallback, recovery codes, and access/refresh tokens.',
+      stack: ['React', 'Node.js', 'Express', 'JWT', 'TOTP'],
+      visual: 'authentication', repo: 'https://github.com/usman-idris/mfa_rebuilt_clean', demo: null, private: false,
+      role: 'Code developer · Academic project',
+      context: 'An academic demonstration connecting a React frontend to an Express authentication API. I developed all project code.',
+      problem: 'A password-only login does not demonstrate how a second factor, recovery options, and session tokens fit together in a complete sign-in flow.',
+      solution: 'I implemented registration and login, bcrypt password hashing, JWT access and refresh tokens, authenticator-based TOTP setup, email OTP fallback, and recovery codes.',
+      features: ['Registration and login with password hashing', 'QR-based authenticator setup and TOTP verification', 'Email OTP fallback and backup recovery codes', 'JWT access and refresh token flows', 'Input validation and rate limits'],
+      engineering: ['Separate React/Vite frontend and Node/Express backend', 'Small modules for token, MFA, storage, and email behaviour', 'Documented local setup and demonstration workflow'],
+      outcome: 'A documented local prototype that demonstrates an end-to-end MFA user journey.',
+      limitation: 'Uses JSON file storage for demonstration. It is not a production authentication service and has no hosted demo.'
+    },
+    {
+      id: 'password-checker', page: 'projects/password-checker.html', title: 'Password Strength Checker', number: '06',
+      category: 'Cybersecurity', filters: ['Cybersecurity', 'Software Development'],
+      status: 'Educational tool', type: 'Password feedback & analysis',
+      summary: 'An interactive password-analysis tool that explains rule checks, dictionary matches, strength scores, and practical improvement suggestions.',
+      stack: ['C#', 'ASP.NET Core MVC', 'Regex', 'Bootstrap'],
+      visual: 'password', repo: 'https://github.com/usman-idris/PasswordChecker', demo: null, private: false,
+      role: 'Sole developer · Personal project',
+      context: 'A personal project exploring how application logic can turn password checks into understandable feedback.',
+      problem: 'A strength label by itself gives little guidance about what made a password weak or how to improve it.',
+      solution: 'I developed a checker that combines pattern rules and dictionary detection with a strength meter, estimated entropy, and actionable suggestions.',
+      features: ['Interactive strength score and feedback', 'Length, character, repetition, and sequence checks', 'Dictionary and weak-pattern detection', 'Estimated entropy and crack-time display', 'Suggestions and a password-generation feature'],
+      engineering: ['Password analysis is separated into a dedicated service', 'Dictionary loading is separated from rule evaluation', 'ASP.NET Core MVC serves the interface and analysis endpoint'],
+      outcome: 'An educational application with publicly available source code and setup documentation.',
+      limitation: 'Strength and crack-time estimates are heuristic educational feedback, not a guarantee of password security.'
+    },
+    {
+      id: 'autosysadmin', page: 'projects/autosysadmin.html', title: 'AutoSysAdmin', number: '07',
+      category: 'Software Development', filters: ['Software Development', 'Cybersecurity'],
+      status: 'Academic prototype', type: 'Administration & automation',
+      summary: 'A modular administration application exploring file management, encryption, log analysis, and scheduled background work.',
+      stack: ['C#', 'ASP.NET Core', 'Hangfire', 'EF Core'],
+      visual: 'automation', repo: null, demo: null, private: true,
+      role: 'Code developer · Advanced Programming coursework',
+      context: 'An Advanced Programming class project. I developed all project code.',
+      problem: 'Administration tasks span files, logs, encryption, and scheduled jobs, making it useful to explore how these responsibilities can be organised behind a single interface.',
+      solution: 'I developed a layered application with dashboard, file-management, encryption, and log-analysis modules, with Hangfire dependencies for background processing.',
+      features: ['Administration dashboard', 'File-management module', 'Encryption module', 'Log-analysis module', 'Background-processing integration'],
+      engineering: ['Core, Application, Infrastructure, and Web projects', 'Separate MVC controllers for administration tasks', 'Hangfire and EF Core integration'],
+      outcome: 'An academic codebase demonstrating modular design across administration tasks.',
+      limitation: 'Presented as coursework and a prototype. A production deployment and independent end-to-end validation are not claimed.'
+    }
+  ],
+  otherWork: [
+    { title: 'SWODEN Intranet', stack: 'C# · ASP.NET Core', text: 'Internal forms, approval workflows, project administration, and role management.', status: 'Earlier organisational work · Private source', repo: null },
+    { title: 'Airport Check-in Simulation', stack: 'Java · Object-oriented design', text: 'Team coursework modelling passengers, flights, baggage, and check-in management.', status: 'Academic project · Private source', repo: null },
+    { title: 'ToDo MVC', stack: 'ASP.NET Core MVC', text: 'A compact task application with create, read, update, and delete workflows.', status: 'Learning project', repo: 'https://github.com/usman-idris/ToDo.MVC' },
+    { title: 'Web Scraper', stack: 'C# · Console application', text: 'A console utility exploring web content extraction.', status: 'Learning project', repo: 'https://github.com/usman-idris/WebScraperConsole1' },
+    { title: 'Book List MVC', stack: 'C# · ASP.NET MVC', text: 'A book-list application exploring database-backed CRUD operations.', status: 'Learning project', repo: 'https://github.com/usman-idris/BookListMVC' },
+    { title: 'Image Upload Application', stack: 'C# · ASP.NET Core', text: 'An exercise in uploading images and managing their database records.', status: 'Learning project', repo: 'https://github.com/usman-idris/ImageApp' },
+    { title: 'AI Financial Agent', stack: 'Python · Gemini', text: 'Forecasting and extraction modules for an affordability challenge; the main entry point remains incomplete.', status: 'Experiment · Partial implementation', repo: 'https://github.com/usman-idris/ai-financial-agent' },
+    { title: 'Deletion Audit Utilities', stack: 'Python · pandas', text: 'Identity-resolution and investigation utilities for a data-deletion challenge; no complete agent claimed.', status: 'Experiment · Partial implementation', repo: 'https://github.com/usman-idris/hackerrank-orchestrate-october26-main' }
+  ]
+};

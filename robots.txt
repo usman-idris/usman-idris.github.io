@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://usman-idris.github.io/sitemap.xml
